@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+{% block title %}
+    Books by publisher
+{% endblock %}
+    {% block content %}
+        
+    <h4>Books by {{ publisher.name }} </h4>
+    <ol>
+        {% for book in publisher_books %}
+            <li type="1">
+                {{book.title}} by {{book.author}}
+            </li>
+        {% endfor %}
+    </ol>    
+    {% endblock %}
+    
