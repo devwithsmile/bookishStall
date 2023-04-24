@@ -1,5 +1,7 @@
+import os
+
 DEBUG = False
 SECRET_KEY = 'TOPSECRET'
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:devonsql@localhost/bookdb'
+SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 
 SQLALCHEMY_TRACK_MODIFICATIONS = False
